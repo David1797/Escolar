@@ -1,0 +1,46 @@
+
+<div class="modal fade" id="modalAsistencia" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="tituloModal">Nuevo Tipo de Asistencia</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="formAsistencia" name="formAsistencia">
+        <input type="hidden" name="idasistencia" id="idasistencia" value="">
+        <input type="hidden" name="idcurso" id="idcurso" value="<?= $curso; ?>">
+        <div class="form-group">
+                <label for="listEstado">Seleccione el Alumno</label>
+                <select class="form-control" name="listAlumno" id="listAlumno" >
+                    <!-- CONTENIDO AJAX -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="listEstado">Seleccione la Asistencia</label>
+                <select class="form-control" name="listTipo" id="listTipo">
+                    <!-- CONTENIDO AJAX -->
+                </select>
+            </div>          <div class="form-group">
+            <label for="control-label">Fecha de Registro:</label>
+            <input type="date" class="form-control" name="fecha" id="fecha">
+          </div>
+          
+          <div class="form-group">
+              <label for="listEstado">Estado</label>
+              <select class="form-control" name="listEstado" id="listEstado">
+                  <option value="1">Activo</option>
+                  <option value="2">Inactivo</option>
+              </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button class="btn btn-primary" id="action" type="submit">Guardar</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
